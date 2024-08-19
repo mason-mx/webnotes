@@ -25,6 +25,7 @@ git add .
 git status –s
 git commit -m 'Initial commit'
 git log
+git log --oneline --no-merges v4.03.00 ^v4.02.00 > change.log
 git show commitID
 git remote add origin ssh://git@10.5.20.16:/home/git/bigdata/deploy.git
 git push origin master
@@ -33,6 +34,8 @@ git pull origin FixForBug
 git push origin FixForBug
 git diff HEAD (for the staged files)
 git diff ':(exclude)*.pdf'
+git diff --name-only HEAD~10 HEAD~5
+git diff HEAD~5 hello.c
 ```
 
 ## Git config
